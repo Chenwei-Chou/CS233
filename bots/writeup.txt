@@ -1,0 +1,18 @@
+<Explain your team's strategy, implementation, etc.>
+
+Here’s out strategies:
+
+1.Two loops (loop and loop2) to handle different start position such that bot0 and bot1:
+	Since we don’t know the start point is on the left or right, we load the x position of the bot before entering the loop and use branching to enter the body of the loop that we want.
+	If the start point is on the left we enter the loop, and if the start point is on the right we enter the loop2.
+	These two loops have different paths, so that we can handle different start position.
+
+2. load water between every vertical direction change
+	To make sure the bot have enough water to clean, we load water before every vertical direction change.
+	This way of loading water makes sure we always have adequate water supply for use
+	Our code use "next:" to gain the water.
+
+3. use branch  to control movement
+	Movement control is implemented using branching instructions to make the bot’s path based on its current position. 
+	We have code chunks like "go_right", "go_left", "go_up", "go_down" to manually control its position for loop.
+	And we use "ggo_right", "ggo_left", "ggo_up", "ggo_down" to manually control its position for loop2.
